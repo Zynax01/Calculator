@@ -1,0 +1,146 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.calculator {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  width: 360px;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  background: #e9ecef;
+  border-radius: 15px;
+  padding: 25px 20px;
+  font-size: 2.8rem;
+  text-align: right;
+  color: #212529;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+  min-height: 70px;
+  margin-bottom: 25px;
+  word-wrap: break-word;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+button {
+  background: #f8f9fa;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  color: #495057;
+  padding: 20px 0;
+  box-shadow: 0 6px #d1d5db;
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #e2e6ea;
+}
+
+button:active {
+  box-shadow: 0 3px #a1a6ab;
+  transform: translateY(3px);
+}
+
+button.operator {
+  background: #7f5af0;
+  color: white;
+  box-shadow: 0 6px #5a3dcf;
+}
+
+button.operator:hover {
+  background: #6841e1;
+}
+
+button.operator:active {
+  box-shadow: 0 3px #452a9f;
+}
+
+button.equals {
+  background: #10b981;
+  color: white;
+  box-shadow: 0 6px #0e996c;
+  grid-row: 4 / 6;
+  align-self: stretch;
+}
+
+button.equals:hover {
+  background: #0e996c;
+}
+
+button.equals:active {
+  box-shadow: 0 3px #0b704f;
+}
+
+button.clear {
+  background: #ef4444;
+  color: white;
+  box-shadow: 0 6px #b91c1c;
+}
+
+button.clear:hover {
+  background: #dc2626;
+}
+
+button.clear:active {
+  box-shadow: 0 3px #7f1d1d;
+}
+
+button.delete {
+  background: #fbbf24;
+  color: #663e00;
+  box-shadow: 0 6px #b27d00;
+}
+
+button.delete:hover {
+  background: #f59e0b;
+}
+
+button.delete:active {
+  box-shadow: 0 3px #744f00;
+}
+
+button.zero {
+  grid-column: span 2;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .calculator {
+    width: 95vw;
+    padding: 20px;
+  }
+
+  .display {
+    font-size: 2.2rem;
+    padding: 20px 15px;
+  }
+
+  button {
+    font-size: 1.3rem;
+    padding: 15px 0;
+  }
+}
